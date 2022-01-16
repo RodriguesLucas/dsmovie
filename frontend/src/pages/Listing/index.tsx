@@ -1,17 +1,29 @@
 import axios from "axios";
+import { useState } from "react";
 import MovieCard from "components/MovieCard";
 import Pagination from "components/pagination";
 import { BASE_URL } from "utils/requests";
+import { MoviePage } from "types/movie";
+import { useEffect } from "react";
 
 function listing() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [pageNumber, setPageNumber] = useState(0);
 
-    axios.get(`${BASE_URL}/movies?size=12&page=0`)
-        .then(response => {
-            console.log(response.data);
-        
-        });
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+        axios.get(`${BASE_URL}/movies?size=12&page=1`)
+            .then(response => {
+                const data = response.data as MoviePage;
+                console.log(data);
+                setPageNumber(data.number)
+            });
+    }, []);
+
+
     return (
         <>
+            <p>{pageNumber}</p>
             <Pagination />
             <div className="container">
                 <div className="row">
