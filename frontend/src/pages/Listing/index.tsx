@@ -31,9 +31,13 @@ function listing() {
             });
     }, [pageNumber]);
 
+    const hanlePageChange = (newPageNumber: number) => {
+        setPageNumber(newPageNumber);
+    }
+
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChange={hanlePageChange} />
             <div className="container">
                 <div className="row">
                     {page.content.map(movie =>
