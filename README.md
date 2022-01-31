@@ -1,7 +1,7 @@
 # Ds Movie
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/RodriguesLucas/dsmovie/blob/main/LICENSE) 
 
-DsMovie é uma aplicaçaõ Full-Stack Web, desenvolvida no decorrer da 6ª edição da **Semana DevSuperior**, evento realizada pela  [DevSuperior](https://learn.devsuperior.com/).
+DsMovie é uma aplicação Full-Stack Web, desenvolvida no decorrer da 6ª edição da **Semana DevSuperior**, evento realizada pela  [DevSuperior](https://learn.devsuperior.com/).
 
 A aplicação consiste em uma pesquisa de avaliação de filmes realizadas na própria aplicação Web, esses dados são computados e é feita a média de estrelas que o filme contém até o momento.
 ## Layout web
